@@ -1,0 +1,624 @@
+2024-10-11T07:07:00.536+0000 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [--add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.invoke=ALL-UNNAMED, --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, -XX:MaxMetaspaceSize=384m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=US-ASCII, -Duser.country=US, -Duser.language=en, -Duser.variant]
+2024-10-11T07:07:00.594+0000 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=a6e3f826-9143-4319-8050-3a39c46f3651,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=501,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2024-10-11T07:07:00.608+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+2024-10-11T07:07:00.608+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-10-11T07:07:00.608+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.18.0.3
+2024-10-11T07:07:00.608+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+2024-10-11T07:07:00.608+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+2024-10-11T07:07:00.609+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+2024-10-11T07:07:00.609+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+2024-10-11T07:07:00.610+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [20c3d2df-77dd-449b-b96d-095a72bcef8f port:40315, addresses:[localhost/127.0.0.1]].
+2024-10-11T07:07:00.614+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Fri Oct 11 07:07:00 GMT 2024, with address: [20c3d2df-77dd-449b-b96d-095a72bcef8f port:40315, addresses:[localhost/127.0.0.1]]
+2024-10-11T07:07:00.614+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [20c3d2df-77dd-449b-b96d-095a72bcef8f port:40315, addresses:[localhost/127.0.0.1]]
+2024-10-11T07:07:00.614+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=a6e3f826-9143-4319-8050-3a39c46f3651,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=501,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2024-10-11T07:07:00.615+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [20c3d2df-77dd-449b-b96d-095a72bcef8f port:40315, addresses:[localhost/127.0.0.1]], context: DefaultDaemonContext[uid=a6e3f826-9143-4319-8050-3a39c46f3651,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=501,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2024-10-11T07:07:00.621+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-11T07:07:00.623+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T07:07:00.626+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T07:07:00.626+0000 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+2024-10-11T07:07:00.626+0000 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+2024-10-11T07:07:00.630+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+2024-10-11T07:07:00.631+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+2024-10-11T07:07:00.631+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-10-11T07:07:00.632+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:52150 to /127.0.0.1:40315.
+2024-10-11T07:07:00.647+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 29: received class org.gradle.launcher.daemon.protocol.Build
+2024-10-11T07:07:00.648+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 29: Received non-IO message from client: Build{id=698b1ecf-ca71-49b0-84e2-01908db7d5b3, currentDir=/app}
+2024-10-11T07:07:00.648+0000 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=698b1ecf-ca71-49b0-84e2-01908db7d5b3, currentDir=/app}.
+2024-10-11T07:07:00.648+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=698b1ecf-ca71-49b0-84e2-01908db7d5b3, currentDir=/app} with connection: socket connection from /127.0.0.1:40315 to /127.0.0.1:52150.
+2024-10-11T07:07:00.650+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=698b1ecf-ca71-49b0-84e2-01908db7d5b3, currentDir=/app}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:40315 to /127.0.0.1:52150] after 7.5E-4 minutes of idle
+2024-10-11T07:07:00.650+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [20c3d2df-77dd-449b-b96d-095a72bcef8f port:40315, addresses:[localhost/127.0.0.1]]
+2024-10-11T07:07:00.650+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [20c3d2df-77dd-449b-b96d-095a72bcef8f port:40315, addresses:[localhost/127.0.0.1]]
+2024-10-11T07:07:00.650+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-11T07:07:00.650+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T07:07:00.651+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T07:07:00.651+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2024-10-11T07:07:00.651+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-10-11T07:07:00.652+0000 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=698b1ecf-ca71-49b0-84e2-01908db7d5b3, currentDir=/app}. Dispatching build started information...
+2024-10-11T07:07:00.652+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 31: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@2b6099d9
+2024-10-11T07:07:00.653+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: [PATH, HOSTNAME, SPRING_HOME, JAVA_HOME, SDKMAN_DIR, TERM, PWD, HOME, GRADLE_HOME]
+2024-10-11T07:07:00.654+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2024-10-11T07:07:00.654+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 501). The daemon log file: /root/.gradle/daemon/8.10.2/daemon-501.out.log
+2024-10-11T07:07:00.655+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 512 MiB]
+2024-10-11T07:07:00.656+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2024-10-11T07:07:00.656+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=a6e3f826-9143-4319-8050-3a39c46f3651,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=501,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:07:03.809Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:07:03.810Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:07:03.832Z  INFO 763 --- [immo] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-11T07:07:03.832Z  INFO 763 --- [immo] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-11T07:07:04.084Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:07:04.092Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:07:04.355Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-11T07:07:04.362Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:07:04.362Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:07:04.381Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:07:04.382Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 549 ms
+2024-10-11T07:07:04.394Z  WARN 763 --- [immo] [  restartedMain] .s.b.d.a.RemoteDevToolsAutoConfiguration : Listening for remote restart updates on /.~~spring-boot!~/restart
+2024-10-11T07:07:04.450Z  INFO 763 --- [immo] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T07:07:04.471Z  INFO 763 --- [immo] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-11T07:07:04.485Z  INFO 763 --- [immo] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T07:07:04.603Z  INFO 763 --- [immo] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T07:07:04.614Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-11T07:07:04.652Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@12e8c7f0
+2024-10-11T07:07:04.653Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-11T07:07:04.795Z  INFO 763 --- [immo] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T07:07:04.797Z  INFO 763 --- [immo] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:07:04.836Z  WARN 763 --- [immo] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T07:07:04.970Z  INFO 763 --- [immo] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-11T07:07:05.002Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-11T07:07:05.007Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Started ImmoApplication in 1.345 seconds (process running for 1.506)
+2024-10-11T07:07:08.264Z  INFO 763 --- [immo] [nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-11T07:07:08.264Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-11T07:07:08.264Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-10-11T07:20:12.389Z  INFO 763 --- [immo] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-11T07:20:12.409Z  INFO 763 --- [immo] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:20:12.411Z  INFO 763 --- [immo] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T07:20:12.413Z  INFO 763 --- [immo] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:20:12.457Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:20:12.457Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:20:12.524Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:20:12.525Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:20:12.573Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-11T07:20:12.574Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:20:12.574Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:20:12.579Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:20:12.579Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 121 ms
+2024-10-11T07:20:12.586Z  WARN 763 --- [immo] [  restartedMain] .s.b.d.a.RemoteDevToolsAutoConfiguration : Listening for remote restart updates on /.~~spring-boot!~/restart
+2024-10-11T07:20:12.598Z  INFO 763 --- [immo] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T07:20:12.599Z  INFO 763 --- [immo] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T07:20:12.604Z  INFO 763 --- [immo] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T07:20:12.605Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-11T07:20:12.607Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@cd068e8
+2024-10-11T07:20:12.607Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-11T07:20:12.616Z  INFO 763 --- [immo] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T07:20:12.616Z  INFO 763 --- [immo] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:20:12.633Z  WARN 763 --- [immo] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T07:20:12.679Z  INFO 763 --- [immo] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-11T07:20:12.683Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-11T07:20:12.686Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Started ImmoApplication in 0.241 seconds (process running for 789.185)
+2024-10-11T07:20:12.687Z  INFO 763 --- [immo] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-11T07:20:25.646Z  INFO 763 --- [immo] [nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-11T07:20:25.646Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-11T07:20:25.648Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-11T07:21:56.729Z  INFO 763 --- [immo] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-11T07:21:56.732Z  INFO 763 --- [immo] [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:21:56.732Z  INFO 763 --- [immo] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-11T07:21:56.733Z  INFO 763 --- [immo] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:21:56.786Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:21:56.786Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:21:56.846Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:21:56.847Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:21:56.885Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-11T07:21:56.885Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:21:56.885Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:21:56.889Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:21:56.890Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 103 ms
+2024-10-11T07:21:56.895Z  WARN 763 --- [immo] [  restartedMain] .s.b.d.a.RemoteDevToolsAutoConfiguration : Listening for remote restart updates on /.~~spring-boot!~/restart
+2024-10-11T07:21:56.906Z  INFO 763 --- [immo] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T07:21:56.907Z  INFO 763 --- [immo] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T07:21:56.911Z  INFO 763 --- [immo] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T07:21:56.911Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-10-11T07:21:56.913Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.mariadb.jdbc.Connection@334d2390
+2024-10-11T07:21:56.913Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-10-11T07:21:56.921Z  INFO 763 --- [immo] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T07:21:56.921Z  INFO 763 --- [immo] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:21:56.937Z  WARN 763 --- [immo] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T07:21:56.981Z  INFO 763 --- [immo] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-11T07:21:56.985Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-11T07:21:56.988Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Started ImmoApplication in 0.213 seconds (process running for 893.486)
+2024-10-11T07:21:56.988Z  INFO 763 --- [immo] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-11T07:22:01.103Z  INFO 763 --- [immo] [nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-11T07:22:01.103Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-11T07:22:01.103Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-10-11T07:22:12.987Z  INFO 763 --- [immo] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-10-11T07:22:12.989Z  INFO 763 --- [immo] [      Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:22:12.990Z  INFO 763 --- [immo] [      Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-10-11T07:22:12.991Z  INFO 763 --- [immo] [      Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:22:13.031Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:22:13.031Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:22:13.093Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:22:13.095Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:22:13.145Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-11T07:22:13.146Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:22:13.146Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:22:13.150Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:22:13.150Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 119 ms
+2024-10-11T07:22:13.156Z  WARN 763 --- [immo] [  restartedMain] .s.b.d.a.RemoteDevToolsAutoConfiguration : Listening for remote restart updates on /.~~spring-boot!~/restart
+2024-10-11T07:22:13.169Z  INFO 763 --- [immo] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T07:22:13.170Z  INFO 763 --- [immo] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T07:22:13.174Z  INFO 763 --- [immo] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T07:22:13.175Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-10-11T07:22:13.176Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.mariadb.jdbc.Connection@588d9ee9
+2024-10-11T07:22:13.176Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-10-11T07:22:13.184Z  INFO 763 --- [immo] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T07:22:13.184Z  INFO 763 --- [immo] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:22:13.203Z  WARN 763 --- [immo] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T07:22:13.256Z  INFO 763 --- [immo] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-11T07:22:13.259Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-11T07:22:13.262Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Started ImmoApplication in 0.242 seconds (process running for 909.761)
+2024-10-11T07:22:13.262Z  INFO 763 --- [immo] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-11T07:22:13.947Z  INFO 763 --- [immo] [nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-11T07:22:13.948Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-11T07:22:13.950Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-11T07:24:05.314Z  INFO 763 --- [immo] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 2 deletions, 1 modification)
+2024-10-11T07:24:05.321Z  INFO 763 --- [immo] [      Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:24:05.322Z  INFO 763 --- [immo] [      Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-10-11T07:24:05.326Z  INFO 763 --- [immo] [      Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:24:05.380Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:24:05.380Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:24:05.433Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:24:05.434Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:24:05.472Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-11T07:24:05.473Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:24:05.473Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:24:05.477Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:24:05.477Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 96 ms
+2024-10-11T07:24:05.485Z  WARN 763 --- [immo] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2024-10-11T07:24:05.485Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-11T07:24:05.488Z  INFO 763 --- [immo] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-11T07:24:05.495Z ERROR 763 --- [immo] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:24:18.518Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:24:18.518Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:24:18.622Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:24:18.624Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:24:18.689Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-11T07:24:18.690Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:24:18.690Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:24:18.696Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:24:18.697Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 177 ms
+2024-10-11T07:24:18.706Z  WARN 763 --- [immo] [  restartedMain] .s.b.d.a.RemoteDevToolsAutoConfiguration : Listening for remote restart updates on /.~~spring-boot!~/restart
+2024-10-11T07:24:18.727Z  INFO 763 --- [immo] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T07:24:18.729Z  INFO 763 --- [immo] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T07:24:18.734Z  INFO 763 --- [immo] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T07:24:18.735Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-10-11T07:24:18.737Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.mariadb.jdbc.Connection@19b0e2d1
+2024-10-11T07:24:18.737Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-10-11T07:24:18.747Z  INFO 763 --- [immo] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T07:24:18.748Z  INFO 763 --- [immo] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:24:18.781Z  WARN 763 --- [immo] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T07:24:18.892Z  INFO 763 --- [immo] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-11T07:24:18.900Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-11T07:24:18.906Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Started ImmoApplication in 0.403 seconds (process running for 1035.404)
+2024-10-11T07:24:18.907Z  INFO 763 --- [immo] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-11T07:24:19.009Z  INFO 763 --- [immo] [nio-8181-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-11T07:24:19.009Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-11T07:24:19.010Z  INFO 763 --- [immo] [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-11T07:34:10.194Z  INFO 763 --- [immo] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-10-11T07:34:10.200Z  INFO 763 --- [immo] [      Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:34:10.201Z  INFO 763 --- [immo] [      Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-10-11T07:34:10.204Z  INFO 763 --- [immo] [      Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:34:10.246Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:34:10.246Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:34:10.301Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:34:10.302Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:34:10.345Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-11T07:34:10.345Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:34:10.345Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:34:10.351Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:34:10.351Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 104 ms
+2024-10-11T07:34:10.356Z  WARN 763 --- [immo] [  restartedMain] .s.b.d.a.RemoteDevToolsAutoConfiguration : Listening for remote restart updates on /.~~spring-boot!~/restart
+2024-10-11T07:34:10.367Z  INFO 763 --- [immo] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T07:34:10.368Z  INFO 763 --- [immo] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T07:34:10.372Z  INFO 763 --- [immo] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T07:34:10.372Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-10-11T07:34:10.374Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.mariadb.jdbc.Connection@729b3245
+2024-10-11T07:34:10.374Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-10-11T07:34:10.381Z  INFO 763 --- [immo] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T07:34:10.381Z  INFO 763 --- [immo] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:34:10.397Z  WARN 763 --- [immo] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T07:34:10.440Z  INFO 763 --- [immo] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-11T07:34:10.444Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-11T07:34:10.447Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Started ImmoApplication in 0.21 seconds (process running for 1626.945)
+2024-10-11T07:34:10.447Z  INFO 763 --- [immo] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-11T07:34:36.454Z  INFO 763 --- [immo] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (2 additions, 0 deletions, 2 modifications)
+2024-10-11T07:34:36.457Z  INFO 763 --- [immo] [      Thread-26] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:34:36.458Z  INFO 763 --- [immo] [      Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-10-11T07:34:36.459Z  INFO 763 --- [immo] [      Thread-26] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:34:36.509Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:34:36.509Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:34:36.567Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:34:36.568Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:34:36.604Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-11T07:34:36.604Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:34:36.604Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:34:36.609Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:34:36.609Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 98 ms
+2024-10-11T07:34:36.613Z  WARN 763 --- [immo] [  restartedMain] .s.b.d.a.RemoteDevToolsAutoConfiguration : Listening for remote restart updates on /.~~spring-boot!~/restart
+2024-10-11T07:34:36.623Z  INFO 763 --- [immo] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T07:34:36.624Z  INFO 763 --- [immo] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T07:34:36.627Z  INFO 763 --- [immo] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T07:34:36.627Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-10-11T07:34:36.628Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.mariadb.jdbc.Connection@4e1f14b2
+2024-10-11T07:34:36.629Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-10-11T07:34:36.635Z  INFO 763 --- [immo] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T07:34:36.635Z  INFO 763 --- [immo] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:34:36.649Z  WARN 763 --- [immo] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T07:34:36.690Z  INFO 763 --- [immo] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-11T07:34:36.694Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-11T07:34:36.696Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Started ImmoApplication in 0.2 seconds (process running for 1653.195)
+2024-10-11T07:34:36.697Z  INFO 763 --- [immo] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-11T07:40:37.908Z  INFO 763 --- [immo] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (2 additions, 0 deletions, 3 modifications)
+2024-10-11T07:40:37.910Z  INFO 763 --- [immo] [      Thread-30] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:40:37.911Z  INFO 763 --- [immo] [      Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-10-11T07:40:37.911Z  INFO 763 --- [immo] [      Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:40:37.953Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:40:37.953Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:40:38.002Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:40:38.003Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:40:38.036Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-11T07:40:38.036Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:40:38.036Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:40:38.040Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:40:38.040Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 86 ms
+2024-10-11T07:40:38.045Z  WARN 763 --- [immo] [  restartedMain] .s.b.d.a.RemoteDevToolsAutoConfiguration : Listening for remote restart updates on /.~~spring-boot!~/restart
+2024-10-11T07:40:38.055Z  INFO 763 --- [immo] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T07:40:38.056Z  INFO 763 --- [immo] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T07:40:38.059Z  INFO 763 --- [immo] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T07:40:38.059Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2024-10-11T07:40:38.061Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.mariadb.jdbc.Connection@2a01849b
+2024-10-11T07:40:38.061Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2024-10-11T07:40:38.067Z  INFO 763 --- [immo] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T07:40:38.067Z  INFO 763 --- [immo] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:40:38.083Z  WARN 763 --- [immo] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T07:40:38.119Z  INFO 763 --- [immo] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-11T07:40:38.122Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-11T07:40:38.125Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Started ImmoApplication in 0.183 seconds (process running for 2014.624)
+2024-10-11T07:40:38.125Z  INFO 763 --- [immo] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-11T07:40:50.129Z  INFO 763 --- [immo] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 5 class path changes (0 additions, 2 deletions, 3 modifications)
+2024-10-11T07:40:50.135Z  INFO 763 --- [immo] [      Thread-34] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:40:50.136Z  INFO 763 --- [immo] [      Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2024-10-11T07:40:50.139Z  INFO 763 --- [immo] [      Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:40:50.232Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:40:50.232Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:40:50.284Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:40:50.285Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:40:50.322Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2024-10-11T07:40:50.322Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:40:50.323Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:40:50.327Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:40:50.327Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 94 ms
+2024-10-11T07:40:50.334Z  WARN 763 --- [immo] [  restartedMain] .s.b.d.a.RemoteDevToolsAutoConfiguration : Listening for remote restart updates on /.~~spring-boot!~/restart
+2024-10-11T07:40:50.351Z  INFO 763 --- [immo] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-11T07:40:50.352Z  INFO 763 --- [immo] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-11T07:40:50.355Z  INFO 763 --- [immo] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-11T07:40:50.355Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2024-10-11T07:40:50.356Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection org.mariadb.jdbc.Connection@1198e53e
+2024-10-11T07:40:50.356Z  INFO 763 --- [immo] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2024-10-11T07:40:50.362Z  INFO 763 --- [immo] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-11T07:40:50.362Z  INFO 763 --- [immo] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:40:50.379Z  WARN 763 --- [immo] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-11T07:40:50.419Z  INFO 763 --- [immo] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-11T07:40:50.423Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2024-10-11T07:40:50.426Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Started ImmoApplication in 0.203 seconds (process running for 2026.924)
+2024-10-11T07:40:50.426Z  INFO 763 --- [immo] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-11T07:41:35.444Z  INFO 763 --- [immo] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 3 deletions, 1 modification)
+2024-10-11T07:41:35.446Z  INFO 763 --- [immo] [      Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T07:41:35.446Z  INFO 763 --- [immo] [      Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2024-10-11T07:41:35.447Z  INFO 763 --- [immo] [      Thread-38] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:41:35.482Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:41:35.482Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:41:35.529Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:41:35.529Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:41:35.561Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-11T07:41:35.561Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:41:35.561Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:41:35.565Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:41:35.565Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 82 ms
+2024-10-11T07:41:35.571Z  WARN 763 --- [immo] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2024-10-11T07:41:35.571Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-11T07:41:35.574Z  INFO 763 --- [immo] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-11T07:41:35.575Z ERROR 763 --- [immo] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2024-10-11T07:45:42.708Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : Starting ImmoApplication using Java 17.0.8 with PID 763 (/app/build/classes/java/main started by root in /app)
+2024-10-11T07:45:42.708Z  INFO 763 --- [immo] [  restartedMain] com.cfa.immo.ImmoApplication             : No active profile set, falling back to 1 default profile: "default"
+2024-10-11T07:45:42.755Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-11T07:45:42.755Z  INFO 763 --- [immo] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-10-11T07:45:42.783Z  INFO 763 --- [immo] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-11T07:45:42.783Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-11T07:45:42.783Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-11T07:45:42.787Z  INFO 763 --- [immo] [  restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-10-11T07:45:42.787Z  INFO 763 --- [immo] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 78 ms
+2024-10-11T07:45:42.793Z  WARN 763 --- [immo] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2024-10-11T07:45:42.793Z  INFO 763 --- [immo] [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-11T07:45:42.796Z  INFO 763 --- [immo] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-11T07:45:42.797Z ERROR 763 --- [immo] [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+thread 29: client disconnection detected, canceling the build
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':bootRun'.
+> Build cancelled while executing task ':bootRun'
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 40m 42s
+4 actionable tasks: 1 executed, 3 up-to-date
+2024-10-11T07:47:42.511+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2024-10-11T07:47:42.782+0000 [DEBUG] [org.gradle.process.internal.DefaultExecHandle] Changing state to: ABORTED
+2024-10-11T07:47:42.782+0000 [DEBUG] [org.gradle.process.internal.DefaultExecHandle] Process 'command '/root/.sdkman/candidates/java/17.0.8-tem/bin/java'' finished with exit value 143 (state: ABORTED)
+2024-10-11T07:47:42.782+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is busy, sleeping until state changes.
+2024-10-11T07:47:42.782+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is busy, sleeping until state changes.
+2024-10-11T07:47:42.783+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=698b1ecf-ca71-49b0-84e2-01908db7d5b3, currentDir=/app}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:40315 to /127.0.0.1:52150]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@6de98cb1 with state Canceled
+2024-10-11T07:47:42.783+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=698b1ecf-ca71-49b0-84e2-01908db7d5b3, currentDir=/app}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:40315 to /127.0.0.1:52150]
+2024-10-11T07:47:42.783+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2024-10-11T07:47:42.783+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [20c3d2df-77dd-449b-b96d-095a72bcef8f port:40315, addresses:[localhost/127.0.0.1]]
+2024-10-11T07:47:42.783+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [20c3d2df-77dd-449b-b96d-095a72bcef8f port:40315, addresses:[localhost/127.0.0.1]]
+2024-10-11T07:47:42.783+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-11T07:47:42.784+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T07:47:42.784+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T07:47:42.784+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is idle now.
+2024-10-11T07:47:42.784+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-10-11T07:47:42.784+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@6abb9dfc]
+2024-10-11T07:47:42.785+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 28: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@6abb9dfc]
+2024-10-11T07:47:42.791+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.CleanUpVirtualFileSystemAfterBuild] Cleaning virtual file system after build finished
+2024-10-11T07:47:42.792+0000 [WARN] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Unable to execute command Build{id=698b1ecf-ca71-49b0-84e2-01908db7d5b3, currentDir=/app} from socket connection from /127.0.0.1:40315 to /127.0.0.1:52150. Dispatching the failure to the daemon client
+org.gradle.internal.remote.internal.MessageIOException: Could not write message Success[value=org.gradle.launcher.exec.BuildActionResult@6abb9dfc] to '/127.0.0.1:52150'.
+	at org.gradle.internal.remote.internal.inet.SocketConnection.dispatch(SocketConnection.java:135)
+	at org.gradle.launcher.daemon.server.SynchronizedDispatchConnection.dispatchAndFlush(SynchronizedDispatchConnection.java:56)
+	at org.gradle.launcher.daemon.server.DefaultDaemonConnection.completed(DefaultDaemonConnection.java:150)
+	at org.gradle.launcher.daemon.server.exec.ReturnResult.execute(ReturnResult.java:41)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.CleanUpVirtualFileSystemAfterBuild.doBuild(CleanUpVirtualFileSystemAfterBuild.java:58)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.api.HandleReportStatus.execute(HandleReportStatus.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.HandleCancel.execute(HandleCancel.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.api.HandleInvalidateVirtualFileSystem.execute(HandleInvalidateVirtualFileSystem.java:46)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.api.HandleStop.execute(HandleStop.java:46)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecuter.executeCommand(DaemonCommandExecuter.java:55)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.handleCommand(DefaultIncomingConnectionHandler.java:161)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.receiveAndHandleCommand(DefaultIncomingConnectionHandler.java:134)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.run(DefaultIncomingConnectionHandler.java:122)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.esotericsoftware.kryo.KryoException: java.io.IOException: Broken pipe
+	at com.esotericsoftware.kryo.io.Output.flush(Output.java:165)
+	at com.esotericsoftware.kryo.io.Output.require(Output.java:142)
+	at com.esotericsoftware.kryo.io.Output.writeBytes(Output.java:228)
+	at org.gradle.internal.serialize.kryo.KryoBackedEncoder.writeBytes(KryoBackedEncoder.java:49)
+	at org.gradle.internal.serialize.AbstractEncoder$EncoderStream.write(AbstractEncoder.java:93)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.drain(ObjectOutputStream.java:1886)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.setBlockDataMode(ObjectOutputStream.java:1795)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1192)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:350)
+	at org.gradle.internal.serialize.DefaultSerializer.write(DefaultSerializer.java:56)
+	at org.gradle.tooling.internal.provider.serialization.SerializedPayloadSerializer.write(SerializedPayloadSerializer.java:32)
+	at org.gradle.tooling.internal.provider.serialization.SerializedPayloadSerializer.write(SerializedPayloadSerializer.java:27)
+	at org.gradle.launcher.daemon.protocol.DaemonMessageSerializer$SuccessSerializer.write(DaemonMessageSerializer.java:149)
+	at org.gradle.launcher.daemon.protocol.DaemonMessageSerializer$SuccessSerializer.write(DaemonMessageSerializer.java:125)
+	at org.gradle.internal.serialize.DefaultSerializerRegistry$TaggedTypeSerializer.write(DefaultSerializerRegistry.java:171)
+	at org.gradle.internal.serialize.Serializers$StatefulSerializerAdapter$2.write(Serializers.java:46)
+	at org.gradle.internal.remote.internal.inet.SocketConnection.dispatch(SocketConnection.java:127)
+	... 24 more
+Caused by: java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:132)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:76)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:53)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:532)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeWithNonBlockingRetry(SocketConnection.java:285)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeBufferToChannel(SocketConnection.java:272)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.write(SocketConnection.java:258)
+	at com.esotericsoftware.kryo.io.Output.flush(Output.java:163)
+	... 40 more
+2024-10-11T07:47:42.792+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 28: dispatching Failure[value=org.gradle.internal.remote.internal.MessageIOException: Could not write message Success[value=org.gradle.launcher.exec.BuildActionResult@6abb9dfc] to '/127.0.0.1:52150'.]
+2024-10-11T07:47:42.793+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=698b1ecf-ca71-49b0-84e2-01908db7d5b3, currentDir=/app}
+2024-10-11T07:47:42.793+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 28: stopping connection
+2024-10-11T07:47:42.794+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 28: stopping connection
+2024-10-11T07:47:50.631+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-10-11T07:47:50.632+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T07:47:50.632+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T07:47:50.632+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-10-11T07:47:50.632+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T07:47:50.632+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.

@@ -1,0 +1,2180 @@
+2024-10-11T08:00:19.614+0000 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [--add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.invoke=ALL-UNNAMED, --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, -XX:MaxMetaspaceSize=384m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=US-ASCII, -Duser.country=US, -Duser.language=en, -Duser.variant]
+2024-10-11T08:00:19.672+0000 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=3232268f-11e1-4a80-85b3-bf38e66edfe3,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=80,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2024-10-11T08:00:19.685+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+2024-10-11T08:00:19.686+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-10-11T08:00:19.686+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.18.0.3
+2024-10-11T08:00:19.686+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+2024-10-11T08:00:19.686+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+2024-10-11T08:00:19.687+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+2024-10-11T08:00:19.687+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+2024-10-11T08:00:19.688+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]].
+2024-10-11T08:00:19.692+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Fri Oct 11 08:00:19 GMT 2024, with address: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T08:00:19.692+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T08:00:19.692+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=3232268f-11e1-4a80-85b3-bf38e66edfe3,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=80,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2024-10-11T08:00:19.693+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]], context: DefaultDaemonContext[uid=3232268f-11e1-4a80-85b3-bf38e66edfe3,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=80,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2024-10-11T08:00:19.699+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-11T08:00:19.701+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T08:00:19.704+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T08:00:19.704+0000 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+2024-10-11T08:00:19.705+0000 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+2024-10-11T08:00:19.708+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:49730 to /127.0.0.1:44969.
+2024-10-11T08:00:19.709+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+2024-10-11T08:00:19.710+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+2024-10-11T08:00:19.710+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-10-11T08:00:19.724+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 29: received class org.gradle.launcher.daemon.protocol.Build
+2024-10-11T08:00:19.725+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 29: Received non-IO message from client: Build{id=057e6a39-7ae9-4a30-923d-25622d3ae78a, currentDir=/app}
+2024-10-11T08:00:19.725+0000 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=057e6a39-7ae9-4a30-923d-25622d3ae78a, currentDir=/app}.
+2024-10-11T08:00:19.725+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=057e6a39-7ae9-4a30-923d-25622d3ae78a, currentDir=/app} with connection: socket connection from /127.0.0.1:44969 to /127.0.0.1:49730.
+2024-10-11T08:00:19.726+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=057e6a39-7ae9-4a30-923d-25622d3ae78a, currentDir=/app}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:44969 to /127.0.0.1:49730] after 7.333333333333333E-4 minutes of idle
+2024-10-11T08:00:19.727+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T08:00:19.727+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T08:00:19.727+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-11T08:00:19.727+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T08:00:19.728+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T08:00:19.728+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2024-10-11T08:00:19.728+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-10-11T08:00:19.729+0000 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=057e6a39-7ae9-4a30-923d-25622d3ae78a, currentDir=/app}. Dispatching build started information...
+2024-10-11T08:00:19.729+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 31: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@2b6099d9
+2024-10-11T08:00:19.730+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: [PATH, HOSTNAME, SPRING_HOME, JAVA_HOME, SDKMAN_DIR, TERM, PWD, HOME, GRADLE_HOME]
+2024-10-11T08:00:19.731+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2024-10-11T08:00:19.731+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 80). The daemon log file: /root/.gradle/daemon/8.10.2/daemon-80.out.log
+2024-10-11T08:00:19.732+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 512 MiB]
+2024-10-11T08:00:19.733+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2024-10-11T08:00:19.733+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=3232268f-11e1-4a80-85b3-bf38e66edfe3,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=80,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+/app/src/main/java/com/cfa/immo/model/Bien.java:7: error: cannot find symbol
+  @Id
+   ^
+  symbol:   class Id
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+   ^
+  symbol:   class GeneratedValue
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+                             ^
+  symbol:   variable GenerationType
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:11: error: cannot find symbol
+  @Column(nullable = false, columnDefinition = "TEXT")
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:14: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:17: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:20: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:23: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+8 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 4s
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new directory: /app/src/main/java/com/cfa/immo/repository
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Bien.java:7: error: cannot find symbol
+  @Id
+   ^
+  symbol:   class Id
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+   ^
+  symbol:   class GeneratedValue
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+                             ^
+  symbol:   variable GenerationType
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:11: error: cannot find symbol
+  @Column(nullable = false, columnDefinition = "TEXT")
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:14: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:17: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:20: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:23: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+8 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 567ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new directory: /app/src/main/java/com/cfa/immo/service
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Bien.java:7: error: cannot find symbol
+  @Id
+   ^
+  symbol:   class Id
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+   ^
+  symbol:   class GeneratedValue
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+                             ^
+  symbol:   variable GenerationType
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:11: error: cannot find symbol
+  @Column(nullable = false, columnDefinition = "TEXT")
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:14: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:17: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:20: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:23: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+8 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 491ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Bien.java:26: error: <identifier> expected
+  public Bien {
+             ^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 455ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Bien.java:7: error: cannot find symbol
+  @Id
+   ^
+  symbol:   class Id
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+   ^
+  symbol:   class GeneratedValue
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+                             ^
+  symbol:   variable GenerationType
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:11: error: cannot find symbol
+  @Column(nullable = false, columnDefinition = "TEXT")
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:14: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:17: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:20: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:23: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+8 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 373ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Bien.java:7: error: cannot find symbol
+  @Id
+   ^
+  symbol:   class Id
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+   ^
+  symbol:   class GeneratedValue
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:8: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+                             ^
+  symbol:   variable GenerationType
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:11: error: cannot find symbol
+  @Column(nullable = false, columnDefinition = "TEXT")
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:14: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:17: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:20: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:23: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+8 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 362ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Bien.java:3: error: package javax.persistence does not exist
+import javax.persistence.*;
+^
+/app/src/main/java/com/cfa/immo/model/Bien.java:9: error: cannot find symbol
+  @Id
+   ^
+  symbol:   class Id
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:10: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+   ^
+  symbol:   class GeneratedValue
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:10: error: cannot find symbol
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+                             ^
+  symbol:   variable GenerationType
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:13: error: cannot find symbol
+  @Column(nullable = false, columnDefinition = "TEXT")
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:16: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:19: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:22: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+/app/src/main/java/com/cfa/immo/model/Bien.java:25: error: cannot find symbol
+  @Column(nullable = false)
+   ^
+  symbol:   class Column
+  location: class Bien
+9 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 928ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T08:06:49.164Z  INFO 894 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: drop table if exists bien
+2024-10-11T08:06:49.169Z  INFO 894 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T08:06:49.170Z  INFO 894 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T08:09:58.221Z  INFO 1343 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: drop table if exists bien
+2024-10-11T08:09:58.228Z  INFO 1343 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T08:09:58.230Z  INFO 1343 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/resources/application.properties
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T08:11:28.133Z  INFO 1491 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T08:11:28.134Z  INFO 1491 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T08:11:28.136Z  INFO 1491 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T08:48:07.212Z  INFO 1657 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T08:48:07.213Z  INFO 1657 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T08:48:07.215Z  INFO 1657 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:13: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:16: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:19: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+4 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 298ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:13: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:19: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+3 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 292ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:13: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:19: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+3 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 282ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:13: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:19: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+3 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 303ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:13: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agent.java:19: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+3 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 338ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 258ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:11: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 263ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:11: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agence.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 267ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:11: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agence.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 241ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:11: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agence.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 266ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:11: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+/app/src/main/java/com/cfa/immo/model/Agence.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 255ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agence.java:10: error: cannot find symbol
+  @Column(nullable=false, columnDefenition="TEXT")
+                          ^
+  symbol:   method columnDefenition()
+  location: @interface Column
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 267ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:03:00.377Z  INFO 2674 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:03:00.378Z DEBUG 2674 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:03:00.382Z DEBUG 2674 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:03:00.385Z DEBUG 2674 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:03:00.389Z  INFO 2674 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:03:00.391Z  INFO 2674 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:05:32.764Z  INFO 3103 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:05:32.764Z DEBUG 3103 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:05:32.768Z DEBUG 3103 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:05:32.772Z DEBUG 3103 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:05:32.777Z  INFO 3103 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:05:32.778Z  INFO 3103 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:05:41.285Z  INFO 3242 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:05:41.286Z DEBUG 3242 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:05:41.290Z DEBUG 3242 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:05:41.294Z DEBUG 3242 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:05:41.298Z  INFO 3242 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:05:41.300Z  INFO 3242 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:05:48.640Z  INFO 3377 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:05:48.640Z DEBUG 3377 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:05:48.647Z DEBUG 3377 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:05:48.651Z DEBUG 3377 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:05:48.657Z  INFO 3377 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:05:48.658Z  INFO 3377 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:05:56.594Z  INFO 3508 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:05:56.594Z DEBUG 3508 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:05:56.598Z DEBUG 3508 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:05:56.601Z DEBUG 3508 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:05:56.606Z  INFO 3508 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:05:56.607Z  INFO 3508 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/repository/AgentRepository.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:06:48.292Z  INFO 3643 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:06:48.292Z DEBUG 3643 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:06:48.301Z DEBUG 3643 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:06:48.305Z DEBUG 3643 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:06:48.310Z  INFO 3643 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:06:48.312Z  INFO 3643 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/service/AgentService.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:09:47.655Z  INFO 3782 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:09:47.655Z DEBUG 3782 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:09:47.659Z DEBUG 3782 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:09:47.663Z DEBUG 3782 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:09:47.667Z  INFO 3782 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:09:47.669Z  INFO 3782 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+modified: /app/src/main/java/com/cfa/immo/service/AgentService.java
+modified: /app/src/main/java/com/cfa/immo/repository/AgentRepository.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:12:08.758Z  INFO 3926 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:12:08.758Z DEBUG 3926 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:12:08.764Z DEBUG 3926 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:12:08.768Z DEBUG 3926 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:12:08.772Z  INFO 3926 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:12:08.774Z  INFO 3926 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/repository/AgentRepository.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:14:22.564Z  INFO 4066 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:14:22.564Z DEBUG 4066 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:14:22.568Z DEBUG 4066 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:14:22.573Z DEBUG 4066 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:14:22.579Z  INFO 4066 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:14:22.581Z  INFO 4066 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentService.java
+modified: /app/src/main/java/com/cfa/immo/repository/AgentRepository.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:18:14.955Z  INFO 4217 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:18:14.955Z DEBUG 4217 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:18:14.959Z DEBUG 4217 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:18:14.963Z DEBUG 4217 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:18:14.967Z  INFO 4217 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:18:14.969Z  INFO 4217 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 4s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:18:56.698Z  INFO 4354 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:18:56.698Z DEBUG 4354 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:18:56.703Z DEBUG 4354 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:18:56.706Z DEBUG 4354 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:18:56.711Z  INFO 4354 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:18:56.713Z  INFO 4354 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:19:17.814Z  INFO 4489 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:19:17.814Z DEBUG 4489 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:19:17.818Z DEBUG 4489 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:19:17.822Z DEBUG 4489 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:19:17.827Z  INFO 4489 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:19:17.829Z  INFO 4489 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java:15: error: illegal start of type
+  @Override
+  ^
+/app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java:15: error: <identifier> expected
+  @Override
+           ^
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 232ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java:12: error: cannot find symbol
+  @Autowired
+   ^
+  symbol:   class Autowired
+  location: class AgentServiceImpl
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 230ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:25:06.817Z  INFO 4687 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:25:06.817Z DEBUG 4687 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:25:06.821Z DEBUG 4687 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:25:06.825Z DEBUG 4687 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:25:06.831Z  INFO 4687 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:25:06.833Z  INFO 4687 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+modified: /app/src/main/java/com/cfa/immo/service/AgentService.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:25:50.017Z  INFO 4823 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:25:50.018Z DEBUG 4823 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agence
+Hibernate: drop table if exists agence
+2024-10-11T09:25:50.022Z DEBUG 4823 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists agent
+Hibernate: drop table if exists agent
+2024-10-11T09:25:50.025Z DEBUG 4823 --- [immo] [ionShutdownHook] org.hibernate.SQL                        : drop table if exists bien
+Hibernate: drop table if exists bien
+2024-10-11T09:25:50.030Z  INFO 4823 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:25:50.032Z  INFO 4823 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java:23: error: incompatible types: Optional<Agent> cannot be converted to Agent
+    Agent existingAgent = agentRepository.findById(id);
+                                                  ^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 253ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/repository/AgentRepository.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java:23: error: incompatible types: Optional<Agent> cannot be converted to Agent
+    Agent existingAgent = agentRepository.findById(id);
+                                                  ^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 245ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+Change detected, executing build...
+
+
+ImmoApplicationTests > contextLoads() FAILED
+    java.lang.IllegalStateException at DefaultCacheAwareContextLoaderDelegate.java:180
+        Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+            Caused by: org.springframework.beans.factory.BeanCreationException at AbstractAutowireCapableBeanFactory.java:1806
+                Caused by: org.springframework.data.repository.query.QueryCreationException at QueryCreationException.java:101
+                    Caused by: java.lang.IllegalArgumentException at PartTreeJpaQuery.java:107
+                        Caused by: org.springframework.data.mapping.PropertyReferenceException at PropertyPath.java:94
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///app/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+Change detected, executing build...
+
+
+ImmoApplicationTests > contextLoads() FAILED
+    java.lang.IllegalStateException at DefaultCacheAwareContextLoaderDelegate.java:180
+        Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+            Caused by: org.springframework.beans.factory.BeanCreationException at AbstractAutowireCapableBeanFactory.java:1806
+                Caused by: org.springframework.data.repository.query.QueryCreationException at QueryCreationException.java:101
+                    Caused by: java.lang.IllegalArgumentException at PartTreeJpaQuery.java:107
+                        Caused by: org.springframework.data.mapping.PropertyReferenceException at PropertyPath.java:94
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///app/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+Change detected, executing build...
+
+
+ImmoApplicationTests > contextLoads() FAILED
+    java.lang.IllegalStateException at DefaultCacheAwareContextLoaderDelegate.java:180
+        Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+            Caused by: org.springframework.beans.factory.BeanCreationException at AbstractAutowireCapableBeanFactory.java:1806
+                Caused by: org.springframework.data.repository.query.QueryCreationException at QueryCreationException.java:101
+                    Caused by: java.lang.IllegalArgumentException at PartTreeJpaQuery.java:107
+                        Caused by: org.springframework.data.mapping.PropertyReferenceException at PropertyPath.java:94
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///app/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/resources/application.properties
+Change detected, executing build...
+
+
+ImmoApplicationTests > contextLoads() FAILED
+    java.lang.IllegalStateException at DefaultCacheAwareContextLoaderDelegate.java:180
+        Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+            Caused by: org.springframework.beans.factory.BeanCreationException at AbstractAutowireCapableBeanFactory.java:1806
+                Caused by: org.springframework.data.repository.query.QueryCreationException at QueryCreationException.java:101
+                    Caused by: java.lang.IllegalArgumentException at PartTreeJpaQuery.java:107
+                        Caused by: org.springframework.data.mapping.PropertyReferenceException at PropertyPath.java:94
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///app/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+
+ImmoApplicationTests > contextLoads() FAILED
+    java.lang.IllegalStateException at DefaultCacheAwareContextLoaderDelegate.java:180
+        Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+            Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+                Caused by: org.springframework.beans.factory.BeanCreationException at AbstractAutowireCapableBeanFactory.java:1806
+                    Caused by: org.springframework.data.repository.query.QueryCreationException at QueryCreationException.java:101
+                        Caused by: java.lang.IllegalArgumentException at PartTreeJpaQuery.java:107
+                            Caused by: org.springframework.data.mapping.PropertyReferenceException at PropertyPath.java:94
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///app/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:33: error: cannot find symbol
+		List<Agent> agents = agentService.findAllAgent();
+		     ^
+  symbol:   class Agent
+  location: class ImmoApplication
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:34: error: cannot find symbol
+		Iterator<Agent> iter = agents.iterator();
+		         ^
+  symbol:   class Agent
+  location: class ImmoApplication
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:37: error: cannot find symbol
+			Agent a = iter.next();
+			^
+  symbol:   class Agent
+  location: class ImmoApplication
+3 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 239ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+
+ImmoApplicationTests > contextLoads() FAILED
+    java.lang.IllegalStateException at DefaultCacheAwareContextLoaderDelegate.java:180
+        Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+            Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+                Caused by: org.springframework.beans.factory.BeanCreationException at AbstractAutowireCapableBeanFactory.java:1806
+                    Caused by: org.springframework.data.repository.query.QueryCreationException at QueryCreationException.java:101
+                        Caused by: java.lang.IllegalArgumentException at PartTreeJpaQuery.java:107
+                            Caused by: org.springframework.data.mapping.PropertyReferenceException at PropertyPath.java:94
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///app/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/test/java/com/cfa/immo/ImmoApplicationTests.java
+Change detected, executing build...
+
+
+ImmoApplicationTests > contextLoads() FAILED
+    java.lang.IllegalStateException at DefaultCacheAwareContextLoaderDelegate.java:180
+        Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+            Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException at AutowiredAnnotationBeanPostProcessor.java:788
+                Caused by: org.springframework.beans.factory.BeanCreationException at AbstractAutowireCapableBeanFactory.java:1806
+                    Caused by: org.springframework.data.repository.query.QueryCreationException at QueryCreationException.java:101
+                        Caused by: java.lang.IllegalArgumentException at PartTreeJpaQuery.java:107
+                            Caused by: org.springframework.data.mapping.PropertyReferenceException at PropertyPath.java:94
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///app/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/AgentServiceImpl.java
+modified: /app/src/main/java/com/cfa/immo/repository/AgentRepository.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T09:54:12.162Z  INFO 5770 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T09:54:12.163Z  INFO 5770 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T09:54:12.165Z  INFO 5770 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:33: error: cannot find symbol
+	public String detailAgent(@PathVariable(value="id") int id){
+	                           ^
+  symbol:   class PathVariable
+  location: class ImmoApplication
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 219ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:36: error: '(' expected
+		while
+		     ^
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:37: error: illegal start of expression
+		return html;
+		^
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 162ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:33: error: cannot find symbol
+	public String detailAgent(@PathVariable(value="id") Long id){
+	                           ^
+  symbol:   class PathVariable
+  location: class ImmoApplication
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 197ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T10:00:43.941Z  INFO 6000 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T10:00:43.942Z  INFO 6000 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T10:00:43.944Z  INFO 6000 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:97: error: missing return statement
+  }
+  ^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 229ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:96: error: missing return statement
+  }
+  ^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 219ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T10:06:35.970Z  INFO 6199 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T10:06:35.971Z  INFO 6199 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T10:06:35.973Z  INFO 6199 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T10:07:47.549Z  INFO 6334 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T10:07:47.550Z  INFO 6334 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T10:07:47.551Z  INFO 6334 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agence.java:23: error: incompatible types: JoinColumns cannot be converted to JoinColumn
+  @JoinTable(name="agence_agent", joinColumns = @JoinColumns(name="agence_id"),
+                                                 ^
+/app/src/main/java/com/cfa/immo/model/Agence.java:24: error: cannot find symbol
+  inversedJoinColumns = @JoinColumns(name="agent_id"))
+  ^
+  symbol:   method inversedJoinColumns()
+  location: @interface JoinTable
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 254ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agence.java:23: error: incompatible types: JoinColumns cannot be converted to JoinColumn
+  @JoinTable(name="agence_agent", joinColumns = @JoinColumns(name="agence_id"),
+                                                 ^
+/app/src/main/java/com/cfa/immo/model/Agence.java:24: error: cannot find symbol
+  inversedJoinColumns = @JoinColumns(name="agent_id"))
+  ^
+  symbol:   method inversedJoinColumns()
+  location: @interface JoinTable
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 221ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T11:44:49.618Z  INFO 6565 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T11:44:49.620Z  INFO 6565 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T11:44:49.622Z  INFO 6565 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agence.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T11:49:34.278Z  INFO 6710 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T11:49:34.279Z  INFO 6710 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T11:49:34.281Z  INFO 6710 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:24: error: ')' expected
+  @JoinColumn(name="agent_bien"
+                               ^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 180ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:26: error: illegal start of type
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false);
+                                                                                 ^
+/app/src/main/java/com/cfa/immo/model/Agent.java:27: error: ';' expected
+  List<Bien> biens = new ArrayList<>()
+                                      ^
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 188ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:26: error: illegal start of type
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false);
+                                                                                 ^
+/app/src/main/java/com/cfa/immo/model/Agent.java:27: error: ';' expected
+  List<Bien> biens = new ArrayList<>()
+                                      ^
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 206ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Agent.java:26: error: illegal start of type
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false);
+                                                                                 ^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 181ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/model/Bien.java:27: error: cannot find symbol
+  @JoinColum(name="agent_id")
+   ^
+  symbol:   class JoinColum
+  location: class Bien
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 202ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+Change detected, executing build...
+
+
+ImmoApplicationTests > contextLoads() FAILED
+    java.lang.IllegalStateException at DefaultCacheAwareContextLoaderDelegate.java:180
+        Caused by: org.springframework.beans.factory.BeanCreationException at AbstractAutowireCapableBeanFactory.java:1806
+            Caused by: org.hibernate.AnnotationException at CollectionBinder.java:1639
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///app/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+Change detected, executing build...
+
+
+ImmoApplicationTests > contextLoads() FAILED
+    java.lang.IllegalStateException at DefaultCacheAwareContextLoaderDelegate.java:180
+        Caused by: org.springframework.beans.factory.BeanCreationException at AbstractAutowireCapableBeanFactory.java:1806
+            Caused by: org.hibernate.AnnotationException at CollectionBinder.java:1639
+
+1 test completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///app/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 2s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/model/Bien.java
+modified: /app/src/main/java/com/cfa/immo/model/Agent.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T12:01:33.854Z  INFO 7198 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T12:01:33.855Z  INFO 7198 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T12:01:33.857Z  INFO 7198 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/DataLoader.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T12:04:52.422Z  INFO 7332 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T12:04:52.424Z  INFO 7332 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T12:04:52.426Z  INFO 7332 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/DataLoader.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/DataLoader.java:3: error: ';' expected
+import org.springframework.boot.CommandLineRunner
+                                                 ^
+/app/src/main/java/com/cfa/immo/DataLoader.java:4: error: '{' expected
+public class DataLoader implements CommandLineRunner
+                                                    ^
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 167ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/DataLoader.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T12:09:35.321Z  INFO 7509 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T12:09:35.323Z  INFO 7509 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T12:09:35.325Z  INFO 7509 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/DataLoader.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T12:10:29.271Z  INFO 7646 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T12:10:29.272Z  INFO 7646 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T12:10:29.274Z  INFO 7646 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/repository/BienRepository.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T12:11:51.948Z  INFO 7778 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T12:11:51.949Z  INFO 7778 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T12:11:51.951Z  INFO 7778 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/service/BienService.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T12:13:45.131Z  INFO 7921 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T12:13:45.132Z  INFO 7921 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T12:13:45.133Z  INFO 7921 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/service/BienServiceImpl.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T12:15:54.970Z  INFO 8063 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T12:15:54.971Z  INFO 8063 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T12:15:54.973Z  INFO 8063 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/DataLoader.java
+modified: /app/src/main/java/com/cfa/immo/repository/BienRepository.java
+modified: /app/src/main/java/com/cfa/immo/service/BienServiceImpl.java
+and some more changes
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/service/BienServiceImpl.java:45: error: cannot find symbol
+  public List<Bien> findAllBien(){
+         ^
+  symbol:   class List
+  location: class BienServiceImpl
+/app/src/main/java/com/cfa/immo/service/BienServiceImpl.java:13: error: BienServiceImpl is not abstract and does not override abstract method updateBien(Bien,Long) in BienService
+public class BienServiceImpl implements BienService{
+       ^
+/app/src/main/java/com/cfa/immo/service/BienServiceImpl.java:23: error: method does not override or implement a method from a supertype
+  @Override
+  ^
+/app/src/main/java/com/cfa/immo/service/BienServiceImpl.java:25: error: non-static method getBienById(Long) cannot be referenced from a static context
+    Bien existingbien = BienRepository.getBienById(id);
+                                      ^
+4 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 231ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/BienServiceImpl.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/service/BienServiceImpl.java:45: error: cannot find symbol
+  public List<Bien> findAllBien(){
+         ^
+  symbol:   class List
+  location: class BienServiceImpl
+/app/src/main/java/com/cfa/immo/service/BienServiceImpl.java:25: error: non-static method getBienById(Long) cannot be referenced from a static context
+    Bien existingbien = BienRepository.getBienById(id);
+                                      ^
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 226ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/BienServiceImpl.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/service/BienServiceImpl.java:26: error: non-static method getBienById(Long) cannot be referenced from a static context
+    Bien existingbien = BienRepository.getBienById(id);
+                                      ^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 205ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/service/BienServiceImpl.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-11T12:26:44.822Z  INFO 8301 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-11T12:26:44.823Z  INFO 8301 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-11T12:26:44.825Z  INFO 8301 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+thread 29: client disconnection detected, canceling the build
+Build cancelled.
+2024-10-11T12:29:45.597+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2024-10-11T12:29:45.598+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is busy, sleeping until state changes.
+2024-10-11T12:29:45.598+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=057e6a39-7ae9-4a30-923d-25622d3ae78a, currentDir=/app}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:44969 to /127.0.0.1:49730]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@6de98cb1 with state Canceled
+2024-10-11T12:29:45.598+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=057e6a39-7ae9-4a30-923d-25622d3ae78a, currentDir=/app}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:44969 to /127.0.0.1:49730]
+2024-10-11T12:29:45.598+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2024-10-11T12:29:45.598+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T12:29:45.598+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T12:29:45.598+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-11T12:29:45.599+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:45.599+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:45.599+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is idle now.
+2024-10-11T12:29:45.599+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-10-11T12:29:45.599+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@6abb9dfc]
+2024-10-11T12:29:45.599+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 28: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@6abb9dfc]
+2024-10-11T12:29:45.600+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.CleanUpVirtualFileSystemAfterBuild] Cleaning virtual file system after build finished
+2024-10-11T12:29:45.600+0000 [WARN] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Unable to execute command Build{id=057e6a39-7ae9-4a30-923d-25622d3ae78a, currentDir=/app} from socket connection from /127.0.0.1:44969 to /127.0.0.1:49730. Dispatching the failure to the daemon client
+org.gradle.internal.remote.internal.MessageIOException: Could not write '/127.0.0.1:49730'.
+	at org.gradle.internal.remote.internal.inet.SocketConnection.flush(SocketConnection.java:145)
+	at org.gradle.launcher.daemon.server.SynchronizedDispatchConnection.dispatchAndFlush(SynchronizedDispatchConnection.java:57)
+	at org.gradle.launcher.daemon.server.DefaultDaemonConnection.completed(DefaultDaemonConnection.java:150)
+	at org.gradle.launcher.daemon.server.exec.ReturnResult.execute(ReturnResult.java:41)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.CleanUpVirtualFileSystemAfterBuild.doBuild(CleanUpVirtualFileSystemAfterBuild.java:58)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.api.HandleReportStatus.execute(HandleReportStatus.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.HandleCancel.execute(HandleCancel.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.api.HandleInvalidateVirtualFileSystem.execute(HandleInvalidateVirtualFileSystem.java:46)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.api.HandleStop.execute(HandleStop.java:46)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.DaemonCommandExecuter.executeCommand(DaemonCommandExecuter.java:55)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.handleCommand(DefaultIncomingConnectionHandler.java:161)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.receiveAndHandleCommand(DefaultIncomingConnectionHandler.java:134)
+	at org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler$ConnectionWorker.run(DefaultIncomingConnectionHandler.java:122)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:62)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:132)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:76)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:53)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:532)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeWithNonBlockingRetry(SocketConnection.java:285)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.writeBufferToChannel(SocketConnection.java:272)
+	at org.gradle.internal.remote.internal.inet.SocketConnection$SocketOutputStream.flush(SocketConnection.java:266)
+	at org.gradle.internal.remote.internal.inet.SocketConnection.flush(SocketConnection.java:143)
+	... 24 more
+2024-10-11T12:29:45.600+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 28: dispatching Failure[value=org.gradle.internal.remote.internal.MessageIOException: Could not write '/127.0.0.1:49730'.]
+2024-10-11T12:29:45.604+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=057e6a39-7ae9-4a30-923d-25622d3ae78a, currentDir=/app}
+2024-10-11T12:29:45.604+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 28: stopping connection
+2024-10-11T12:29:45.604+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 28: stopping connection
+2024-10-11T12:29:49.710+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-10-11T12:29:49.710+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:49.711+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:49.711+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-10-11T12:29:49.712+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:49.712+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:59.710+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-10-11T12:29:59.710+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:59.711+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:59.711+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-10-11T12:29:59.712+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:59.712+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:59.718+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-10-11T12:29:59.718+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:59.718+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:59.719+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2024-10-11T12:29:59.719+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:59.719+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:59.720+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Storing daemon stop event: other compatible daemons were started and after being idle for 0 minutes and not recently used
+2024-10-11T12:29:59.720+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon stop event with timestamp 1728649799720
+2024-10-11T12:29:59.721+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-11T12:29:59.721+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:59.722+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:59.723+0000 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build other compatible daemons were started and after being idle for 0 minutes and not recently used
+2024-10-11T12:29:59.723+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to other compatible daemons were started and after being idle for 0 minutes and not recently used. The daemon is not running a build
+2024-10-11T12:29:59.723+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+2024-10-11T12:29:59.724+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2024-10-11T12:29:59.724+0000 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2024-10-11T12:29:59.724+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T12:29:59.725+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T12:29:59.725+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-11T12:29:59.725+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:59.726+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:59.727+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2024-10-11T12:29:59.729+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] jars (/root/.gradle/caches/jars-9) has last been fully cleaned up 5 hours ago
+2024-10-11T12:29:59.729+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] Skipping cleanup for jars (/root/.gradle/caches/jars-9) as it is not yet due
+2024-10-11T12:29:59.729+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache jars (/root/.gradle/caches/jars-9) was closed 2 times.
+2024-10-11T12:29:59.729+0000 [DEBUG] [org.gradle.internal.watch.vfs.impl.WatchingVirtualFileSystem] Closing VFS, dropping state
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Generated Gradle JARs cache (/root/.gradle/caches/8.10.2/generated-gradle-jars) was closed 0 times.
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry] Finished listening to file system change events
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] artifact cache (/root/.gradle/caches/modules-2) has last been fully cleaned up 5 hours ago
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] Skipping cleanup for artifact cache (/root/.gradle/caches/modules-2) as it is not yet due
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache artifact cache (/root/.gradle/caches/modules-2) was closed 6 times.
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] groovy-dsl (/root/.gradle/caches/8.10.2/groovy-dsl) has last been fully cleaned up 5 hours ago
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] Skipping cleanup for groovy-dsl (/root/.gradle/caches/8.10.2/groovy-dsl) as it is not yet due
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache groovy-dsl (/root/.gradle/caches/8.10.2/groovy-dsl) was closed 0 times.
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] Artifact transforms cache (/root/.gradle/caches/8.10.2/transforms) has last been fully cleaned up 5 hours ago
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] Skipping cleanup for Artifact transforms cache (/root/.gradle/caches/8.10.2/transforms) as it is not yet due
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Artifact transforms cache (/root/.gradle/caches/8.10.2/transforms) was closed 0 times.
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for journal cache (/root/.gradle/caches/journal-1)
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache file-access.bin (/root/.gradle/caches/journal-1/file-access.bin)
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on journal cache (/root/.gradle/caches/journal-1).
+2024-10-11T12:29:59.733+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache journal cache (/root/.gradle/caches/journal-1) was closed 6 times.
+2024-10-11T12:29:59.734+0000 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file hash cache (/root/.gradle/caches/8.10.2/fileHashes)
+2024-10-11T12:29:59.734+0000 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache resourceHashesCache.bin (/root/.gradle/caches/8.10.2/fileHashes/resourceHashesCache.bin)
+2024-10-11T12:29:59.734+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file hash cache (/root/.gradle/caches/8.10.2/fileHashes).
+2024-10-11T12:29:59.734+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache file hash cache (/root/.gradle/caches/8.10.2/fileHashes) was closed 6 times.
+2024-10-11T12:29:59.734+0000 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for Java compile cache (/root/.gradle/caches/8.10.2/javaCompile)
+2024-10-11T12:29:59.734+0000 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache jarAnalysis.bin (/root/.gradle/caches/8.10.2/javaCompile/jarAnalysis.bin)
+2024-10-11T12:29:59.734+0000 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache classAnalysis.bin (/root/.gradle/caches/8.10.2/javaCompile/classAnalysis.bin)
+2024-10-11T12:29:59.734+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on Java compile cache (/root/.gradle/caches/8.10.2/javaCompile).
+2024-10-11T12:29:59.734+0000 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Java compile cache (/root/.gradle/caches/8.10.2/javaCompile) was closed 2 times.
+2024-10-11T12:29:59.735+0000 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Deleting unused version-specific caches in /root/.gradle/caches' started
+2024-10-11T12:29:59.735+0000 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Deleting unused version-specific caches in /root/.gradle/caches'
+2024-10-11T12:29:59.735+0000 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Deleting unused version-specific caches in /root/.gradle/caches' completed
+2024-10-11T12:29:59.735+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2024-10-11T12:29:59.735+0000 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2024-10-11T12:29:59.735+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T12:29:59.735+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T12:29:59.735+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-11T12:29:59.735+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-11T12:29:59.736+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-11T12:29:59.736+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2024-10-11T12:29:59.736+0000 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] File lock listener thread completed.
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+2024-10-11T12:29:59.738+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [26768b4f-af8e-4566-999e-9153ded38e0d port:44969, addresses:[localhost/127.0.0.1]]
+2024-10-11T12:29:59.738+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] VM shutdown hook was unable to remove the daemon address from the registry. It will be cleaned up later.
+java.lang.IllegalStateException: Cannot start managing file contention because this handler has been closed.
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler.assertNotStopped(DefaultFileLockContentionHandler.java:217)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler.getCommunicator(DefaultFileLockContentionHandler.java:260)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler.reservePort(DefaultFileLockContentionHandler.java:254)
+	at org.gradle.cache.internal.DefaultFileLockManager.lock(DefaultFileLockManager.java:124)
+	at org.gradle.cache.internal.DefaultFileLockManager.lock(DefaultFileLockManager.java:106)
+	at org.gradle.cache.internal.DefaultFileLockManager.lock(DefaultFileLockManager.java:101)
+	at org.gradle.cache.internal.OnDemandFileAccess.updateFile(OnDemandFileAccess.java:51)
+	at org.gradle.cache.internal.FileBackedObjectHolder.update(FileBackedObjectHolder.java:77)
+	at org.gradle.cache.internal.FileIntegrityViolationSuppressingObjectHolderDecorator.lambda$update$0(FileIntegrityViolationSuppressingObjectHolderDecorator.java:48)
+	at org.gradle.cache.internal.FileIntegrityViolationSuppressingObjectHolderDecorator.doUpdate(FileIntegrityViolationSuppressingObjectHolderDecorator.java:58)
+	at org.gradle.cache.internal.FileIntegrityViolationSuppressingObjectHolderDecorator.update(FileIntegrityViolationSuppressingObjectHolderDecorator.java:48)
+	at org.gradle.launcher.daemon.registry.PersistentDaemonRegistry.remove(PersistentDaemonRegistry.java:133)
+	at org.gradle.launcher.daemon.server.Daemon$1.run(Daemon.java:133)
+	at java.base/java.lang.Thread.run(Thread.java:833)

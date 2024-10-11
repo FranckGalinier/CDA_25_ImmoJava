@@ -1,0 +1,466 @@
+2024-10-10T09:23:51.121+0000 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [--add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.invoke=ALL-UNNAMED, --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, -XX:MaxMetaspaceSize=384m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=US-ASCII, -Duser.country=US, -Duser.language=en, -Duser.variant]
+2024-10-10T09:23:51.179+0000 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=bc499546-5d1b-4f09-b412-4a185a18bc2b,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=625,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2024-10-10T09:23:51.192+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+2024-10-10T09:23:51.192+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2024-10-10T09:23:51.193+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.18.0.3
+2024-10-10T09:23:51.193+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+2024-10-10T09:23:51.193+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+2024-10-10T09:23:51.193+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo
+2024-10-10T09:23:51.193+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+2024-10-10T09:23:51.194+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [20511380-ef5c-4e6a-8d96-f5ccf9e4e903 port:39241, addresses:[localhost/127.0.0.1]].
+2024-10-10T09:23:51.199+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Thu Oct 10 09:23:51 GMT 2024, with address: [20511380-ef5c-4e6a-8d96-f5ccf9e4e903 port:39241, addresses:[localhost/127.0.0.1]]
+2024-10-10T09:23:51.199+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [20511380-ef5c-4e6a-8d96-f5ccf9e4e903 port:39241, addresses:[localhost/127.0.0.1]]
+2024-10-10T09:23:51.199+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=bc499546-5d1b-4f09-b412-4a185a18bc2b,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=625,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2024-10-10T09:23:51.200+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [20511380-ef5c-4e6a-8d96-f5ccf9e4e903 port:39241, addresses:[localhost/127.0.0.1]], context: DefaultDaemonContext[uid=bc499546-5d1b-4f09-b412-4a185a18bc2b,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=625,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2024-10-10T09:23:51.206+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-10T09:23:51.207+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-10T09:23:51.210+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-10T09:23:51.210+0000 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+2024-10-10T09:23:51.211+0000 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+2024-10-10T09:23:51.214+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+2024-10-10T09:23:51.215+0000 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+2024-10-10T09:23:51.215+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-10-10T09:23:51.216+0000 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:52964 to /127.0.0.1:39241.
+2024-10-10T09:23:51.232+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 29: received class org.gradle.launcher.daemon.protocol.Build
+2024-10-10T09:23:51.233+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 29: Received non-IO message from client: Build{id=0c179310-a7a9-4d28-8afa-842ae93fd721, currentDir=/app}
+2024-10-10T09:23:51.233+0000 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=0c179310-a7a9-4d28-8afa-842ae93fd721, currentDir=/app}.
+2024-10-10T09:23:51.233+0000 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=0c179310-a7a9-4d28-8afa-842ae93fd721, currentDir=/app} with connection: socket connection from /127.0.0.1:39241 to /127.0.0.1:52964.
+2024-10-10T09:23:51.235+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=0c179310-a7a9-4d28-8afa-842ae93fd721, currentDir=/app}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:39241 to /127.0.0.1:52964] after 7.5E-4 minutes of idle
+2024-10-10T09:23:51.235+0000 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [20511380-ef5c-4e6a-8d96-f5ccf9e4e903 port:39241, addresses:[localhost/127.0.0.1]]
+2024-10-10T09:23:51.235+0000 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [20511380-ef5c-4e6a-8d96-f5ccf9e4e903 port:39241, addresses:[localhost/127.0.0.1]]
+2024-10-10T09:23:51.235+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2024-10-10T09:23:51.235+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2024-10-10T09:23:51.236+0000 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2024-10-10T09:23:51.236+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2024-10-10T09:23:51.236+0000 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2024-10-10T09:23:51.237+0000 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=0c179310-a7a9-4d28-8afa-842ae93fd721, currentDir=/app}. Dispatching build started information...
+2024-10-10T09:23:51.237+0000 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 31: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@20994daa
+2024-10-10T09:23:51.238+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: [PATH, HOSTNAME, SPRING_HOME, JAVA_HOME, SDKMAN_DIR, TERM, PWD, HOME, GRADLE_HOME]
+2024-10-10T09:23:51.239+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2024-10-10T09:23:51.240+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 625). The daemon log file: /root/.gradle/daemon/8.10.2/daemon-625.out.log
+2024-10-10T09:23:51.240+0000 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 512 MiB]
+2024-10-10T09:23:51.241+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2024-10-10T09:23:51.241+0000 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=bc499546-5d1b-4f09-b412-4a185a18bc2b,javaHome=/root/.sdkman/candidates/java/17.0.8-tem,javaVersion=17,javaVendor=Eclipse Adoptium,daemonRegistryDir=/root/.gradle/daemon,pid=625,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED,--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=US-ASCII,-Duser.country=US,-Duser.language=en,-Duser.variant]
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:13: error: non-static method test() cannot be referenced from a static context
+		test();
+		^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 4s
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:14: error: non-static method test() cannot be referenced from a static context
+		test();
+		^
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 541ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-10T09:25:18.865Z  INFO 1003 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T09:25:18.867Z  INFO 1003 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-10T09:25:18.868Z  INFO 1003 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 6s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-10T09:28:43.362Z  INFO 1473 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T09:28:43.363Z  INFO 1473 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-10T09:28:43.365Z  INFO 1473 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-10T09:29:41.860Z  INFO 1613 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T09:29:41.861Z  INFO 1613 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-10T09:29:41.863Z  INFO 1613 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-10T09:29:48.615Z  INFO 1749 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T09:29:48.616Z  INFO 1749 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-10T09:29:48.618Z  INFO 1749 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:6: error: cannot find symbol
+@Controller
+ ^
+  symbol: class Controller
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 312ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-10T09:44:16.156Z  INFO 1935 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T09:44:16.158Z  INFO 1935 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-10T09:44:16.160Z  INFO 1935 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:6: error: cannot find symbol
+@Controller
+ ^
+  symbol: class Controller
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 294ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:5: error: cannot find symbol
+import org.springframework.stereotype.controller;
+                                     ^
+  symbol:   class controller
+  location: package org.springframework.stereotype
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:7: error: cannot find symbol
+@Controller
+ ^
+  symbol: class Controller
+2 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 247ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:5: error: cannot find symbol
+import org.springframework.stereotype.controller;
+                                     ^
+  symbol:   class controller
+  location: package org.springframework.stereotype
+1 error
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 313ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:5: error: cannot find symbol
+import org.springframework.stereotype.controller;
+                                     ^
+  symbol:   class controller
+  location: package org.springframework.stereotype
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:7: error: cannot find symbol
+@Controller
+ ^
+  symbol: class Controller
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:11: error: cannot find symbol
+	@RequestMapping(value("/", method = RequestMethod.GET))
+	 ^
+  symbol:   class RequestMapping
+  location: class ImmoApplication
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:11: error: expression not allowed as annotation value
+	@RequestMapping(value("/", method = RequestMethod.GET))
+	                     ^
+4 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 271ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:5: error: cannot find symbol
+import org.springframework.stereotype.controller;
+                                     ^
+  symbol:   class controller
+  location: package org.springframework.stereotype
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:8: error: cannot find symbol
+@Controller
+ ^
+  symbol: class Controller
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:6: error: package org.springframework.web.annotation does not exist
+import org.springframework.web.annotation.*;
+^
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:12: error: cannot find symbol
+	@RequestMapping(value("/", method = RequestMethod.GET))
+	 ^
+  symbol:   class RequestMapping
+  location: class ImmoApplication
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:12: error: expression not allowed as annotation value
+	@RequestMapping(value("/", method = RequestMethod.GET))
+	                     ^
+5 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 273ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+new file: /app/src/main/java/com/cfa/immo/RequestMapping.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:5: error: cannot find symbol
+import org.springframework.stereotype.controller;
+                                     ^
+  symbol:   class controller
+  location: package org.springframework.stereotype
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:8: error: cannot find symbol
+@Controller
+ ^
+  symbol: class Controller
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:6: error: package org.springframework.web.annotation does not exist
+import org.springframework.web.annotation.*;
+^
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:12: error: cannot find symbol
+	@RequestMapping(value("/", method = RequestMethod.GET))
+	                     ^
+  symbol:   method value()
+  location: @interface RequestMapping
+4 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 286ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+deleted: /app/src/main/java/com/cfa/immo/RequestMapping.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:5: error: cannot find symbol
+import org.springframework.stereotype.controller;
+                                     ^
+  symbol:   class controller
+  location: package org.springframework.stereotype
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:8: error: cannot find symbol
+@Controller
+ ^
+  symbol: class Controller
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:6: error: package org.springframework.web.annotation does not exist
+import org.springframework.web.annotation.*;
+^
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:12: error: cannot find symbol
+	@RequestMapping(value("/", method = RequestMethod.GET))
+	 ^
+  symbol:   class RequestMapping
+  location: class ImmoApplication
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:12: error: expression not allowed as annotation value
+	@RequestMapping(value("/", method = RequestMethod.GET))
+	                     ^
+5 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 242ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:5: error: cannot find symbol
+import org.springframework.stereotype.controller;
+                                     ^
+  symbol:   class controller
+  location: package org.springframework.stereotype
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:8: error: cannot find symbol
+@Controller
+ ^
+  symbol: class Controller
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:6: error: package org.springframework.web.annotation does not exist
+import org.springframework.web.annotation.*;
+^
+3 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 327ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:5: error: cannot find symbol
+import org.springframework.stereotype.controller;
+                                     ^
+  symbol:   class controller
+  location: package org.springframework.stereotype
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:8: error: cannot find symbol
+@RestController
+ ^
+  symbol: class RestController
+/app/src/main/java/com/cfa/immo/ImmoApplication.java:6: error: package org.springframework.web.annotation does not exist
+import org.springframework.web.annotation.*;
+^
+3 errors
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+BUILD FAILED in 258ms
+2 actionable tasks: 2 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
+modified: /app/src/main/java/com/cfa/immo/ImmoApplication.java
+Change detected, executing build...
+
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2024-10-10T10:02:19.708Z  INFO 3107 --- [immo] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-10T10:02:19.710Z  INFO 3107 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-10T10:02:19.711Z  INFO 3107 --- [immo] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 3s
+8 actionable tasks: 8 executed
+
+Waiting for changes to input files... (ctrl-d to exit)
